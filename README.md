@@ -9,6 +9,11 @@ CheckNetIsolation LoopbackExempt -a -n="Microsoft.MicrosoftEdge_8wekyb3d8bbwe"
 
 This allows for the extension to make connections to KeePassHTTP on the loopback address.
 
+A few additional notes:
+It looks like edge doesn't support the listener for the CTRL+U and CTRL+P keyboard shortcuts (although I didn't look too hard to figure that out).
+
+I'm currently running this from the latest Windows Insider build of the upcoming Fall update (build 16291). I'm assuming it will work on the current version, but just in case it doesn't that may be why.
+
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
