@@ -12,8 +12,8 @@ keepass.latestVersionUrl = "https://passifox.appspot.com/kph/latest-version.txt"
 keepass.cacheTimeout = 30 * 1000; // milliseconds
 keepass.databaseHash = "no-hash"; //no-hash = keepasshttp is too old and does not return a hash value
 keepass.keyRing = (typeof(localStorage.keyRing) == 'undefined') ? {} : JSON.parse(localStorage.keyRing);
-keepass.keyId = "chromeipass-cryptokey-name";
-keepass.keyBody = "chromeipass-key";
+keepass.keyId = "browseripass-cryptokey-name";
+keepass.keyBody = "browseripass-key";
 keepass.to_s = cryptoHelpers.convertByteArrayToString;
 keepass.to_b = cryptoHelpers.convertStringToByteArray;
 
@@ -204,7 +204,7 @@ keepass.generatePassword = function (callback, tab, forceCallback) {
 }
 
 keepass.copyPassword = function(callback, tab, password) {
-	var bg = chrome.extension.getBackgroundPage();
+	var bg = browser.extension.getBackgroundPage();
 	var c2c = bg.document.getElementById("copy2clipboard");
 	if(!c2c) {
 		var input = document.createElement('input');

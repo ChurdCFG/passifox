@@ -32,7 +32,7 @@ httpAuth.processPendingCallbacks = function(details) {
 
 	// WORKAROUND: second parameter should be tab, but is an own object with tab-id
 	// but in background.js only tab.id is used. To get tabs we could use
-	// chrome.tabs.get(tabId, callback) <-- but what should callback be?
+	// browser.tabs.get(tabId, callback) <-- but what should callback be?
 
 	var url = (httpAuth.isProxy && httpAuth.proxyUrl) ? httpAuth.proxyUrl : httpAuth.url;
 

@@ -1,37 +1,13 @@
-# PassIFox and chromeIPass
+# edgeIPass - fork of the PassIFox and chromeIPass project from pfn's github.
 
-are extensions to integrate [KeePass](http://keepass.info)/[KeePassXC](https://keepassxc.org/) as a password manager with Mozilla Firefox and Google Chrome browsers.
+These are extensions to integrate [KeePass](http://keepass.info)/[KeePassXC](https://keepassxc.org/) as a password manager with the different browsers.  As a basic test using Microsoft's Edge Extension Toolkit for conversion, I've replaced the chromeipass folder with an edgeipass folder, and made the various changes to get the tool working with Edge
 
-They require [KeePassHttp](https://github.com/pfn/keepasshttp/), a KeePass plugin to expose password entries securely (256bit AES/CBC) over HTTP.
+It also requires [KeePassHttp](https://github.com/pfn/keepasshttp/), a KeePass plugin to expose password entries securely (256bit AES/CBC) over HTTP.
 
+For edgeIPass to work properly, you will need to run the following in Windows PowerShell as an admin:
+CheckNetIsolation LoopbackExempt -a -n="Microsoft.MicrosoftEdge_8wekyb3d8bbwe"
 
-## chromeIPass (for Google Chrome)
-
-- [Download](https://chrome.google.com/webstore/detail/chromeipass/ompiailgknfdndiefoaoiligalphfdae)
-- [Documentation](https://github.com/pfn/passifox/blob/master/documentation/chromeIPass.md) (features, installation guide, troubleshooting, functionality, etc.)
-
-## PassIFox (for Mozilla Firefox)
-
-- [Download](https://addons.mozilla.org/en-US/firefox/addon/passifox/)
-- [Documentation](https://github.com/pfn/passifox/blob/master/documentation/PassIFox.md)
-
-Currently, the documentation of PassIFox is not up-to-date!
-Support is always welcome.
-
-## Troubleshooting
-
-If you [open an issue](https://github.com/pfn/passifox/issues/), always give us the following information:
-
-1. the extension are you using (chromeIPass or PassIFox) and its version
-2. version of your browser
-2. KeePassHttp version
-3. KeePass/KeePassXC version
-4. pages on which the error occur
-
-PassIFox & ChromeIPass Copyright © 2010-2017 Perry Nguyen  
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, version 3 of the License.
+This allows for the extension to make connections to KeePassHTTP on the loopback address.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
